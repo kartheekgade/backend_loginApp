@@ -24,6 +24,7 @@
     "@nestjs/core": "^7.6.15",
     "@nestjs/mongoose": "^7.2.4",
     "@nestjs/platform-express": "^7.6.15",
+    "cors": "^2.8.5",
     "login-module": "0.0.1",
     "mongoose": "^5.12.8",
     "reflect-metadata": "^0.1.13",

@@ -27,7 +27,7 @@ async getUser(username: string)  {
     };
   }
   async getAllUser() {
-      const users = await this.user.find().exec;
+      const users = await this.user.find();
       return users;
   }
   
@@ -50,7 +50,9 @@ async getUser(username: string)  {
   private async findUser(username: string): Promise<User> {
     let user;
     try {
-      user = await this.user.findOne({_id: username});
+      user = await this.user.findOne({
+        username : username
+      });
     } catch (error) {
       throw new NotFoundException('Could not find user.');
     }
